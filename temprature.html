@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    .result {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Temperature Converter</h2>
+    <input type="text" id="degrees" placeholder="Enter degrees">
+    <select id="type">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+    </select>
+    <button onclick="convertTemperature()">Convert</button>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function convertTemperature() {
+        var degrees = parseFloat(document.getElementById('degrees').value);
+        var type = document.getElementById('type').value;
+        var result = document.getElementById('result');
+        
+        if (isNaN(degrees)) {
+            result.innerHTML = "Please enter a valid number for degrees.";
+            return;
+        }
+        
+        if (type === 'celsius') {
+            result.innerHTML = degrees + "°C is " + (degrees * 9/5 + 32).toFixed(2) + "°F";
+        } else {
+            result.innerHTML = degrees + "°F is " + ((degrees - 32) * 5/9).toFixed(2) + "°C";
+        }
+    }
+</script>
+
+</body>
+</html>

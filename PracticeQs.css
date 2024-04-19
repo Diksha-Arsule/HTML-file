@@ -1,0 +1,58 @@
+h1{
+    color:#1b74e4;
+    font-family:'Courier New';
+}
+
+#login {
+    background-color: aqua;
+}
+
+#register {
+    background-color: aqua;
+}
+
+.search {
+    background-color: black;
+    color:white;
+}
+
+#myId  p {
+    color:green;
+}
+
+h1{
+    color:pink;
+}
+
+#greet {
+    color:yellow;
+}
+
+.myClass {
+    color:brown;
+}
+
+div p{
+    background-color:black;
+}
+
+.para {
+    background-color:blue;
+}
+
+p {
+    background-color:green;
+}
+
+div.greetDiv .greet {
+    color:green;
+}
+
+.greetDiv p {
+    color:blue;
+}
+
+.greetDiv .greet {
+    color:red;
+}
+
